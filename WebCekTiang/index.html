@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Penarikan Bendera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Aplikasi Simulasi Penarikan Bendera</h1>
+
+  <!-- Pilihan Mode -->
+  <div class="mode-selector">
+    <label><input type="radio" name="mode" value="lagu" checked> Rumus 1 (Sinkron dengan Lagu)</label>
+    <label><input type="radio" name="mode" value="kerekan"> Rumus 2 (Standar Kerekan)</label>
+  </div>
+
+  <!-- FORM RUMUS 1 -->
+  <div id="form-lagu" class="form-container">
+    <div class="illustration">
+      <img src="assets/tiang.svg" alt="Tiang Bendera">
+      <img src="assets/bendera.svg" alt="Bendera">
+    </div>
+    <div class="form-inputs">
+      <label>Tinggi Tiang (Tt, cm): <input type="number" id="tt-lagu"></label>
+      <label>Tinggi Pengikat Tali (Tk, cm): <input type="number" id="tk-lagu"></label>
+      <label>Lebar Bendera (Lb, cm): <input type="number" id="lb-lagu"></label>
+      <label>Durasi Lagu (detik): <input type="number" id="w-lagu"></label>
+      <button onclick="hitungLagu()">Hitung</button>
+      <p id="hasil-lagu"></p>
+    </div>
+  </div>
+
+  <!-- FORM RUMUS 2 -->
+  <div id="form-kerekan" class="form-container hidden">
+    <div class="illustration">
+      <img src="assets/tiang.svg" alt="Tiang Bendera">
+      <img src="assets/bendera.svg" alt="Bendera">
+      <img src="assets/orang.svg" alt="Orang Paskibra">
+    </div>
+    <div class="form-inputs">
+      <label>Tinggi Tiang (Tt, cm): <input type="number" id="tt-kerekan"></label>
+      <label>Tinggi Pengikat Tali (Tk, cm): <input type="number" id="tk-kerekan"></label>
+      <label>Lebar Bendera (Lb, cm): <input type="number" id="lb-kerekan"></label>
+      <label>Lebar Kerekan (Lk, cm): <input type="number" id="lk-kerekan"></label>
+      <button onclick="hitungKerekan()">Hitung</button>
+      <p id="hasil-kerekan"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
